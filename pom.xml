@@ -113,6 +113,11 @@
 			<version>1.2.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
