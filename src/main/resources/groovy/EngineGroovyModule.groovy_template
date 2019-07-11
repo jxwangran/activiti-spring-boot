@@ -1,0 +1,32 @@
+/**   
+ * Copyright © 2017 北京易酒批电子商务有限公司. All rights reserved.
+ */
+package com.xu.drools
+
+import com.xu.drools.service.i.EngineGroovyModuleRule
+import com.xu.drools.bean.ReturnOrderGenRule
+import org.springframework.beans.factory.annotation.Autowired
+import com.xu.drools.service.ReturnService
+import com.xu.drools.bean.ReturnOrder
+import com.xu.drools.bean.ReturnOrderGenRule
+
+/** 
+* @ClassName: EngineGroovyModule 
+* @Description: 
+* @author wangran
+* @date Jul 9, 2019 7:05:15 PM 
+*/
+class %s implements EngineGroovyModuleRule {
+	
+	@Autowired
+	private ReturnService returnService;
+	
+	public boolean run(Object context) {
+		%s
+	}
+	
+	public ReturnOrder getReturnOrder(ReturnOrderGenRule context) {
+		return returnService.getFirstReturnOrder(context);
+	}
+	
+}

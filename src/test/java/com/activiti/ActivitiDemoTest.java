@@ -14,7 +14,6 @@ import org.activiti.bpmn.converter.BpmnXMLConverter;
 import org.activiti.bpmn.model.BpmnModel;
 import org.activiti.editor.constants.ModelDataJsonConstants;
 import org.activiti.editor.language.json.converter.BpmnJsonConverter;
-import org.activiti.editor.language.json.converter.BpmnJsonConverterUtil;
 import org.activiti.engine.HistoryService;
 import org.activiti.engine.IdentityService;
 import org.activiti.engine.ManagementService;
@@ -31,7 +30,6 @@ import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.runtime.Execution;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
-import org.apache.tomcat.util.security.MD5Encoder;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -176,5 +174,6 @@ public class ActivitiDemoTest {
 		boolean isTrue = identityService.checkPassword("237", DigestUtils.md5DigestAsHex("123456".getBytes()));
 		Assert.assertNotEquals(isTrue, true);
 	}
+	
 	
 }
