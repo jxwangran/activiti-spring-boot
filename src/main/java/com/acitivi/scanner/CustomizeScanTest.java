@@ -1,4 +1,4 @@
-package com.acitivi.config;
+package com.acitivi.scanner;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -49,7 +49,7 @@ public class CustomizeScanTest {
 		public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
 			Scanner scanner = new Scanner((BeanDefinitionRegistry) beanFactory);
 			scanner.setResourceLoader(this.applicationContext);
-			scanner.scan("org.wcong.test.spring.scan");
+			scanner.scan("com.acitivi.scanner");
 		}
 	}
 
